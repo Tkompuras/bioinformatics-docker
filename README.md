@@ -11,6 +11,6 @@ A basic dockerfile for all my bioinformatics needs
 * Build the image
 ```docker build -t bioinformatics:1.0.0 .```
 * Run container
-```docker run -d -p 9875:9875 --restart=unless-stopped bioinformatics:1.0.0```
+```docker run -d -p 9875:9875 --restart=unless-stopped --name bioinformatics -v [path_on_your_computer]:[path_on_the_container] bioinformatics:1.0.0```
 * Use the token from the docker logs.
 ```docker ps``` Find the container id. ```docker logs [container_id]```. Get the token
