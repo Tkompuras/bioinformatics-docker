@@ -11,7 +11,8 @@ RUN conda update -y --all
 RUN conda config --add channels bioconda
 RUN conda install -y pip ipython
 RUN conda install -y -c conda-forge biopython
+RUN conda install -y -c conda-forge jupyterlab
 
 
 EXPOSE 9875
-CMD jupyter-notebook --ip=0.0.0.0 --no-browser --allow-root --port=9875
+CMD jupyter lab --ip=0.0.0.0 --no-browser --allow-root --port=9875
