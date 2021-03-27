@@ -15,4 +15,4 @@ RUN conda install -y -c conda-forge jupyterlab
 
 
 EXPOSE 9875
-CMD jupyter lab --ip=0.0.0.0 --no-browser --allow-root --port=9875
+CMD jupyter lab --ip=0.0.0.0 --no-browser --allow-root --port=9875 --NotebookApp.iopub_data_rate_limit=1e10
